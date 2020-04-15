@@ -10,9 +10,9 @@
 
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+body, html {height: 80%}
 .bgimg {
-  min-height: 100%;
+  min-height: 60%;
   background-position: center;
   background-size: cover;
 }
@@ -36,18 +36,18 @@ body, html {height: 100%}
 </div>
 
 
-<p class="w3-large w3-center">Live ATC Chatter</p>
+<p class="w3-large w3-center">Select Live ATC Chatter</p>
 <div style="text-align: center; width: 100%;">
-    <input type="radio" value="unnt" name="rad" onclick="chatter(this.value);" checked="checked"> Novosibirsk 
+    <input type="radio" value="unnt" name="rad" onclick="chatter(this.value);"> Novosibirsk 
     <input type="radio" value="rjtt_app_dep" name="rad" onclick="chatter(this.value);"> Tokyo 
     <input type="radio" value="eidw3" name="rad" onclick="chatter(this.value);"> Dublin 
     <input type="radio" value="kord8" name="rad" onclick="chatter(this.value);"> Chicago 
 </div>
 <br>
 
-<p class="w3-large w3-center">Ambient Music</p>
+<p class="w3-large w3-center">Select Ambient Music</p>
 <div style="text-align: center; width: 100%;">
-    <input type="radio" value="Dbgpt4Dp6kA" name="rad2" onclick="music(this.value);" checked="checked"> Cosmic Ambience 
+    <input type="radio" value="Dbgpt4Dp6kA" name="rad2" onclick="music(this.value);"> Cosmic Ambience 
     <input type="radio" value="-dikWB6wm0A" name="rad2" onclick="music(this.value);"> Brian Eno 
     <input type="radio" value="MojW0fVaaFE" name="rad2" onclick="music(this.value);"> Hiroshi Yoshimura  
     <input type="radio" value="1KbauuM9EhY" name="rad2" onclick="music(this.value);"> Yiruma 
@@ -67,8 +67,6 @@ body, html {height: 100%}
       var youtube = document.getElementById("video2");
       youtube.src = "https://www.youtube-nocookie.com/embed/"+val+"?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1";
     }
-    window.onload=chatter('unnt');
-    window.onload=music('Dbgpt4Dp6kA');
 </script>
 
 
