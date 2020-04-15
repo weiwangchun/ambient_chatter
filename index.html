@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Ambient Music + Air Traffic Control Chatter + International Space Station Live Stream</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-black">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge"> Oddly Relaxing </div>
+  <div class="w3-display-topright w3-padding-large w3-small">
+    Ambient Music + Air Traffic Control Chatter + International Space Station Live Stream
+  </div>
+  <div class="w3-display-middle">
+    <iframe id="video1" width="1280" height="720" src="http://ustream.tv/embed/17074538" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="w3-display-middle">
+    <iframe id="video2" width="800" height="0" src="https://www.youtube-nocookie.com/embed/Dbgpt4Dp6kA?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<br>
+
+<script type="text/javascript">
+    function chatter(val){
+      var audio = document.getElementById("player2");
+      audio.src = "https://s1-bos.liveatc.net/"+ val;
+      audio.volume = 1;
+      audio.load();
+    }
+    function music(val){
+      var youtube = document.getElementById("video2");
+      youtube.src = "https://www.youtube-nocookie.com/embed/"+val+"?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1";
+      youtube.volume = 0.7;
+      youtube.load()
+    }
+
+</script>
+
+<p class="w3-large w3-center">Live ATC Chatter</p>
+<div style="text-align: center; width: 100%;">
+    <input type="radio" value="unnt" name="rad" onclick="chatter(this.value);" checked="checked"> Novosibirsk 
+    <input type="radio" value="rjtt_app_dep" name="rad" onclick="chatter(this.value);"> Tokyo 
+    <input type="radio" value="eidw3" name="rad" onclick="chatter(this.value);"> Dublin 
+    <input type="radio" value="kord8" name="rad" onclick="chatter(this.value);"> Chicago 
+</div>
+<br>
+
+<p class="w3-large w3-center">Ambient Music</p>
+<div style="text-align: center; width: 100%;">
+    <input type="radio" value="Dbgpt4Dp6kA" name="rad2" onclick="music(this.value);" checked="checked"> Cosmic Ambience 
+    <input type="radio" value="-dikWB6wm0A" name="rad2" onclick="music(this.value);"> Brian Eno 
+    <input type="radio" value="MojW0fVaaFE" name="rad2" onclick="music(this.value);"> Hiroshi Yoshimura  
+    <input type="radio" value="1KbauuM9EhY" name="rad2" onclick="music(this.value);"> Yiruma 
+    <input type="radio" value="QOUS6Qa-a58" name="rad2" onclick="music(this.value);"> Atlantique Sud 
+</div>
+
+<audio id="player2" crossorigin="anonymous" preload="auto" src="https://s1-bos.liveatc.net/unnt" type="audio/mp3" controls="controls" autoplay="true"></audio>
+
+
+</body>
+</html>
+
