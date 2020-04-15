@@ -28,11 +28,30 @@ body, html {height: 100%}
     Ambient Music + Air Traffic Control Chatter + International Space Station Live Stream
   </div>
   <div class="w3-display-middle">
-    <iframe id="video1" width="1280" height="720" src="https://ustream.tv/embed/17074538" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    <iframe id="video1" width="1280" height="720" src="https://ustream.tv/embed/17074538" frameborder="0" allow="autoplay" allowfullscreen onclick="chatter('unnt'); music('Dbgpt4Dp6kA')"></iframe>
   </div>
   <div class="w3-display-middle">
     <iframe id="video2" width="800" height="0" src="https://www.youtube.com/embed/Dbgpt4Dp6kA?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;autoplay=1&amp;loop=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>
   </div>
+</div>
+
+
+<p class="w3-large w3-center">Live ATC Chatter</p>
+<div style="text-align: center; width: 100%;">
+    <input type="radio" value="unnt" name="rad" onclick="chatter(this.value);" checked="checked"> Novosibirsk 
+    <input type="radio" value="rjtt_app_dep" name="rad" onclick="chatter(this.value);"> Tokyo 
+    <input type="radio" value="eidw3" name="rad" onclick="chatter(this.value);"> Dublin 
+    <input type="radio" value="kord8" name="rad" onclick="chatter(this.value);"> Chicago 
+</div>
+<br>
+
+<p class="w3-large w3-center">Ambient Music</p>
+<div style="text-align: center; width: 100%;">
+    <input type="radio" value="Dbgpt4Dp6kA" name="rad2" onclick="music(this.value);" checked="checked"> Cosmic Ambience 
+    <input type="radio" value="-dikWB6wm0A" name="rad2" onclick="music(this.value);"> Brian Eno 
+    <input type="radio" value="MojW0fVaaFE" name="rad2" onclick="music(this.value);"> Hiroshi Yoshimura  
+    <input type="radio" value="1KbauuM9EhY" name="rad2" onclick="music(this.value);"> Yiruma 
+    <input type="radio" value="QOUS6Qa-a58" name="rad2" onclick="music(this.value);"> Atlantique Sud 
 </div>
 
 <br>
@@ -54,23 +73,7 @@ body, html {height: 100%}
     //window.onload=music("Dbgpt4Dp6kA");
 </script>
 
-<p class="w3-large w3-center">Live ATC Chatter</p>
-<div style="text-align: center; width: 100%;">
-    <input type="radio" value="unnt" name="rad" onclick="chatter(this.value);" checked="checked"> Novosibirsk 
-    <input type="radio" value="rjtt_app_dep" name="rad" onclick="chatter(this.value);"> Tokyo 
-    <input type="radio" value="eidw3" name="rad" onclick="chatter(this.value);"> Dublin 
-    <input type="radio" value="kord8" name="rad" onclick="chatter(this.value);"> Chicago 
-</div>
-<br>
 
-<p class="w3-large w3-center">Ambient Music</p>
-<div style="text-align: center; width: 100%;">
-    <input type="radio" value="Dbgpt4Dp6kA" name="rad2" onclick="music(this.value);" checked="checked"> Cosmic Ambience 
-    <input type="radio" value="-dikWB6wm0A" name="rad2" onclick="music(this.value);"> Brian Eno 
-    <input type="radio" value="MojW0fVaaFE" name="rad2" onclick="music(this.value);"> Hiroshi Yoshimura  
-    <input type="radio" value="1KbauuM9EhY" name="rad2" onclick="music(this.value);"> Yiruma 
-    <input type="radio" value="QOUS6Qa-a58" name="rad2" onclick="music(this.value);"> Atlantique Sud 
-</div>
 
 <audio id="player2" crossorigin="anonymous" preload="auto" src="https://s1-bos.liveatc.net/unnt" type="audio/mp3" controls="controls" autoplay="autoplay"></audio>
 
